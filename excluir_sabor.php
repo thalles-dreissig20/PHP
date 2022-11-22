@@ -1,0 +1,13 @@
+<?php
+
+include_once('inc/mysqli.class.php');
+
+$id = $_GET['id'];
+
+$sql = "DELETE FROM sabor WHERE id = $id";
+$result = $db->get_row($sql);
+
+header("location: index.php?page=consulta_sabor");
+
+//print_r($result);
+?>
